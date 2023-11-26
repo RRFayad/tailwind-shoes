@@ -1,33 +1,46 @@
-import React from "react";
+import { TbShoppingBag } from "react-icons/tb";
+import React, { useState } from "react";
 import NikeLogo from "../assets/nike-logo.svg?react"; //?react is a vite thing
 import { RxHamburgerMenu } from "react-icons/rx";
 
 const ROUTES = ["Home", "About", "Services", "Pricing", "Contact"];
 
 function Nav() {
+  const [isMobileMenuShown, setIsMobileMenuShown] = useState(false);
   return (
-    <nav className="flex flex-col items-center justify-between">
-      <div className="flex w-full items-center justify-between ">
-        {/* Logo */}
-        <a href="#">
-          <NikeLogo className="h-20 w-20" />
-        </a>
-        {/* Burger Button */}
-        <button className="rounded-lg p-2 hover:bg-gray-100 focus:ring-2 focus:ring-gray-200">
-          <RxHamburgerMenu size={25} />
-        </button>
-      </div>
-      <div className="w-full">
-        <ul className=" rounded-lg border border-gray-100 bg-gray-50 p-4">
+    <nav className="flex flex-wrap items-center justify-between">
+      {/* Logo */}
+      <a href="#">
+        <NikeLogo className="h-20 w-20" />
+      </a>
+      {/* Burger Button */}
+      <button
+        onClick={() => setIsMobileMenuShown((prevState) => !prevState)}
+        className="rounded-lg p-2 hover:bg-gray-100 focus:ring-2 focus:ring-gray-200 lg:hidden"
+      >
+        <RxHamburgerMenu size={25} />
+      </button>
+      {/* Menu List */}
+      <div
+        className={`${
+          !isMobileMenuShown && "hidden"
+        } w-full lg:block lg:w-auto`}
+      >
+        <ul className=" flex flex-col rounded-lg border border-gray-100 bg-gray-50 p-4 lg:flex-row lg:space-x-8 lg:border-none lg:bg-transparent">
           {ROUTES.map((route) => (
             <li
               key={route}
-              className=" cursor-pointer rounded-lg  px-3 py-2 font-sans text-lg first:bg-blue-500 first:text-white hover:bg-gray-100"
+              className=" cursor-pointer rounded-lg  px-3 py-2 font-sans text-lg hover:bg-gray-100 sm:first:bg-blue-500 sm:first:text-white lg:first:bg-transparent lg:first:text-blue-500"
             >
               {route}
             </li>
           ))}
         </ul>
+      </div>
+      <div className="fixed bottom-4 left-4 lg:static">
+        <div className="flex-center h-12 w-12 rounded-full bg-white shadow-md">
+          <TbShoppingBag />
+        </div>
       </div>
     </nav>
   );

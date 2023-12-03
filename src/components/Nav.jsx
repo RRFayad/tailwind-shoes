@@ -16,7 +16,7 @@ function Nav() {
       {/* Burger Button */}
       <button
         onClick={() => setIsMobileMenuShown((prevState) => !prevState)}
-        className="rounded-lg p-2 hover:bg-gray-100 focus:ring-2 focus:ring-gray-200 lg:hidden"
+        className=" rounded-lg p-2 hover:bg-gray-100 focus:ring-2 focus:ring-gray-200 lg:hidden"
       >
         <RxHamburgerMenu size={25} />
       </button>
@@ -40,7 +40,7 @@ function Nav() {
         </ul>
       </div>
       <div className="fixed bottom-4 left-4 lg:static">
-        <div className="flex-center h-12 w-12 cursor-pointer rounded-full bg-white shadow-md lg:mr-8">
+        <div className="flex-center btn-press-animation h-12 w-12 cursor-pointer rounded-full bg-white shadow-md lg:mr-8">
           <TbShoppingBag />
         </div>
       </div>

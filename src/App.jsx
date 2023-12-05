@@ -2,10 +2,18 @@ import Nav from "./components/nav";
 import ShoeDetail from "./components/ShoeDetail";
 import NewArrivalsSection from "./components/NewArrivalsSection";
 import Sidebar from "./components/Sidebar";
-import CartItem from "./components/CartItem";
+import Cart from "./components/Cart";
 
 import { SHOE_LIST } from "./constant";
 import { useState } from "react";
+
+const FAKE_CART_ITEMS = SHOE_LIST.map((shoe) => {
+  return {
+    product: shoe,
+    qty: 1,
+    size: 44,
+  };
+});
 
 function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -18,10 +26,7 @@ function App() {
         isOpen={isSidebarOpen}
         onClickClose={() => setIsSidebarOpen(false)}
       >
-        <h2 className="mb-10 text-2xl font-bold">Cart</h2>
-        <CartItem item={SHOE_LIST[0]} />
-        <CartItem item={SHOE_LIST[2]} />
-        <CartItem item={SHOE_LIST[3]} />
+        <Cart cartItems={FAKE_CART_ITEMS} />
       </Sidebar>
     </div>
   );

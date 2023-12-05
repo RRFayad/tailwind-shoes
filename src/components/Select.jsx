@@ -9,9 +9,10 @@ function Select(props) {
       <select
         name=""
         id=""
-        className="h-8 w-24 appearance-none border border-gray-300 bg-transparent p-4  md:h-14 "
+        defaultValue={""}
+        className=" w-24 appearance-none border border-gray-300 bg-white p-4  "
       >
-        <option key={title} value="" disabled selected hidden>
+        <option value="" disabled>
           {title}
         </option>
         {options.map((option) => (
@@ -20,7 +21,7 @@ function Select(props) {
           </option>
         ))}
       </select>
-      <div className="flex-center absolute inset-y-0 right-0 -z-10 pr-3">
+      <div className="flex-center absolute inset-y-0 right-0 pr-3">
         <IoIosArrowDown />
       </div>
     </div>

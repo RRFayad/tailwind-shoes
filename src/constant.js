@@ -14,7 +14,7 @@ export const SHOE_LIST = [
     title: "Nike Air Max 270",
     description:
       "The Nike Air Max 270 is a lifestyle shoe that's sure to turn heads with its vibrant color gradient.",
-    price: 160,
+    price: "160$",
   },
   {
     id: 2,
@@ -23,7 +23,7 @@ export const SHOE_LIST = [
     title: "Nike Air Vapor",
     description:
       "The Nike Air Vapor is a sleek and stylish shoe that's perfect for any occasion. It's the perfect shoe for any active lifestyle.",
-    price: 100,
+    price: "100$",
   },
   {
     id: 3,
@@ -32,7 +32,7 @@ export const SHOE_LIST = [
     title: "Nike Air Max 2090",
     description:
       "The Nike Air Max 2090 is shoe that's both stylish and comfortable. It's the perfect shoe for any fashion-forward individual.",
-    price: 150,
+    price: "150$",
   },
   {
     id: 4,
@@ -41,6 +41,6 @@ export const SHOE_LIST = [
     title: "Nike Air Blazer",
     description:
       "The Nike Air Blazer is a classic shoe that's perfect for any casual occasion. It's the perfect shoe for any laid-back individual.",
-    price: 110,
+    price: "110$",
   },
 ];

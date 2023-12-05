@@ -22,12 +22,12 @@ function CartItem({ item }) {
         <div className="flex space-x-6">
           <div>
             <div className="font-bold">SIZE</div>
-            <Select options={SIZES} title="" />
+            <Select options={SIZES} title="" className={"w-16 p-1"} />
           </div>
           <div>
             <div>
               <div className="font-bold">QTY</div>
-              <Select options={QTY} title="" />
+              <Select options={QTY} title="" className={"w-16 p-1"} />
             </div>
           </div>
         </div>

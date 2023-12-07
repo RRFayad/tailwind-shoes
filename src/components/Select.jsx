@@ -6,13 +6,13 @@ import { IoIosArrowDown } from "react-icons/io";
 function Select(props) {
   const { title, options, className, defaultValue } = props;
   return (
-    <div className="relative">
+    <div className="relative dark:text-black">
       <select
         name=""
         id=""
         defaultValue={defaultValue || ""}
         className={twMerge(
-          ` w-24 appearance-none border border-gray-300 bg-white px-2 py-4 ${className}`,
+          ` w-24 appearance-none border border-gray-300 bg-white px-2 py-4  ${className}`,
         )}
       >
         <option value="" disabled>
